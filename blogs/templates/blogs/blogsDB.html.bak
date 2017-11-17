@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<head>
+	<title>数据表</title>
+	</head>
+<body>
+{% for i in T %}
+	{{i}}
+	{% endfor %}	
+	<br>	<a href={% url 'home_learn' %}>返回learn</a>
+</body>

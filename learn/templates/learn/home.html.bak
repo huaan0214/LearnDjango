@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>{% block title %}学习{% endblock%}learning</title>
+</head>
+<body style="color:blue;background-color:gray">
+	{% if request.user.is_authenticated %}
+		{{request.user.username}},您好！
+	{% else %}
+		请登录
+	{% endif %}	
+
+<a href='{{request.path}}?{{request.GET.urlencode}}&delete=1'>当前网址加参数</a>
+<h1>站点:{{info_dict.site}} 内容:{{info_dict.content}}</h1>
+ 
+	{% block content %}
+	<div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>
+	{% endblock %}
+	{{string}}
+	<br>
+	{% for i in TutorialList %}
+	{{i}}
+	{% endfor %}
+	<br>
+	{% for each in List %}
+	{{each}}
+		{% if not forloop.last %},{% endif %}
+		{% if forloop.counter|divisibleby:10  %}<br>
+		{% endif %}
+	{% endfor %}
+	<br>
+ <a href={% url 'home_calc' %}>calc</a>
+<<<<<<< HEAD
+ <a href={% url 'home_db' huaan 23 %}>添加到数据库</a>
+=======
+ <a href={% url 'home_db' 'huaan' 23 %}>添加到数据库</a>
+>>>>>>> origin/master
+ <a href={% url 'get_db'%}>查看数据表</a>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>华安之家</title>
+</head>
+<body  style="color:red;background-color:gray;">
+ 
+<a href="/add/4/5/">4+5</a>
+<a href="{% url 'add2' 2 2 %}">link to 4+5</a>
+<a href={% url 'home_learn' %}>learn</a>
+</body>
+</html>
