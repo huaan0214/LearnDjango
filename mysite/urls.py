@@ -19,16 +19,10 @@ from django.contrib import admin
 from learn import views as learn_view
 from calc import views as calc_view
 from people import views as people_view
-<<<<<<< HEAD
-urlpatterns = [
-		url(r'^db\/([a-z]*[A-Z]*)\/(\d+)\/*$',people_view.upLoadDB,name='home_db'),
-		url(r'^getdb\/*$',people_view.getDB,name='get_db'),
-=======
 from blogs import views as blogs_view
 urlpatterns = [
 		url(r'^db\/([a-z]*[A-Z]*)\/(\d+)\/*$',people_view.upLoadDB,name='home_db'),
 		url(r'^getdb\/*$',blogs_view.getDB,name='get_db'),
->>>>>>> origin/master
 		url(r'^\/*$',learn_view.home,name='home_learn'),
 		url(r'^calc\/*$',calc_view.home,name='home_calc'),
 		url(r'^add\/(\d+)\/(\d+)\/*$',calc_view.old_add2_redirect),#
