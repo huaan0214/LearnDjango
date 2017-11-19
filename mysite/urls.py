@@ -29,5 +29,6 @@ urlpatterns = [
 		url(r'^new_add\/(\d+)\/(\d+)\/*$',calc_view.add2,name='add2'),#
     url(r'^admin\/*', admin.site.urls),
     url(r'^index\/*$',calc_view.index),
-    url('^add\/$',calc_view.add),
+    url('^add\/*$',calc_view.add),
+    url('^send\/*$',learn_view.sendMail,name='send')
     ]

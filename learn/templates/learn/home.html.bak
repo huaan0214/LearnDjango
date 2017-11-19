@@ -30,12 +30,9 @@
 	{% endfor %}
 	<br>
  <a href={% url 'home_calc' %}>calc</a>
-<<<<<<< HEAD
- <a href={% url 'home_db' huaan 23 %}>添加到数据库</a>
-=======
  <a href={% url 'home_db' 'huaan' 23 %}>添加到数据库</a>
->>>>>>> origin/master
  <a href={% url 'get_db'%}>查看数据表</a>
+ <a href={% url 'send' %}></a>
 </body>
 </html>
 </body>
